@@ -17,7 +17,7 @@ int main() {
         pair<pair<int,char>,int> low, high;
         low = high = { { occ[s[0] - 'a'], s[0]}, 0};
         for (int i=1; i<n; i++) {
-            low = min(low, {{occ[s[i] - 'a'], s[i]}, i});
+            low  = min(low, {{occ[s[i] - 'a'], s[i]}, i});
             high = max(high, {{occ[s[i] - 'a'], s[i]}, i});
         }
         s[low.second] = s[high.second];
