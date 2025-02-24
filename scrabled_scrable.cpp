@@ -5,9 +5,7 @@ using namespace std;
 int main(){
     string s; cin >> s;
 
-    vector<string> v;
-    vector<string> c;
-    vector<string> vc;
+    vector<string> v, c, vc;
 
     for(int i = 0; i < s.size(); i++ ){
         if ( i <s.size()-1 ){
@@ -27,26 +25,22 @@ int main(){
         }
     }
 
-    sort(c.begin(), c.end(), [](string a, string b){
+    sort( c.begin(), c.end(), []( string a, string b ){
         return a.size() > b.size();
     });
 
-    int c_count = c.size();
-    int v_count = v.size();
-    int vc_count = vc.size();
+    int c_count = c.size(), v_count = v.size(), vc_count = vc.size();
 
     while ( vc_count > 1 ){
-        if ( v_count*2 < c_count ) v_count++; 
+        if ( v_count*2 < c_count )v_count++; 
         if ( v_count*2 > c_count ) c_count++;
         vc_count--;
     }
-
 
     int res = 0;
     for( int i = 0; v_count < 0 && c_count < 1; ++i ){
         res += 3;
         c_count  -= 2;
-        
     }
 
     return 0;
