@@ -12,8 +12,7 @@ int main(){
         int n, k; cin >> n >> k;
         string s; cin >> s;
 
-        int cntOdds = 0 , cntEvens  = 0;
-        int cntOccurance[26] = {0};
+        int cntOdds = 0, cntOccurance[26] = {0};
 
         for( char& c: s ){
             ++cntOccurance[ c - 'a' ];
@@ -21,11 +20,14 @@ int main(){
 
         for(int i = 0; i < 26; i++ ){
             if ( cntOccurance[i] % 2 != 0 ) {
+                /*
                 if ( cntOccurance[i] > 2 ){
                     cntOdds += cntOccurance[i] % 2;
                 } else {
                     cntOdds += cntOccurance[i];
                 }
+                */
+                cntOdds += cntOccurance[i] % 2;
             }
         }
 
