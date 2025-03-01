@@ -21,7 +21,6 @@ void solve(){
         }
     }
     cout << removal << endl;
-
 }
 
 

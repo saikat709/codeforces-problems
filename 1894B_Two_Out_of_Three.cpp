@@ -1,14 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/**
-Accepted But wrong for
-5 6 
-1 2 3 4 5
-output: 1, answer: 0
-*/
-
-
 void solve(){
     int n; cin >> n;
     map<int, int> mp;

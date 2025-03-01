@@ -8,7 +8,7 @@ int main(){
 	int t; cin>>t;
 	while(t--){
 		ll n, f, a, b;
-		cin>>n>>f>>a>>b;
+		cin >> n >> f >> a >> b;
 
 		ll prev = 0;
 		for(ll i =0; i<n; ++i){
@@ -20,7 +20,7 @@ int main(){
 				f -= (cur-prev)*a;		
 			}
 			prev = cur;
-			//if(f<=0) break;
+			//if( f <= 0 ) break;
 		}
 		cout<<"$$ "<<f<<endl;
 		cout<< ( f<=0 ? "NO" : "YES" ) <<endl;
