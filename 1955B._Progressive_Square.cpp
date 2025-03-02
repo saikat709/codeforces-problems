@@ -26,7 +26,7 @@ void solve() {
     }
     cout << ( isProgressive ? "YES\n" : "NO\n" );
 }
-
+c
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
