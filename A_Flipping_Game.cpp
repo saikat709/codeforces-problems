@@ -11,10 +11,10 @@ int main(){
     for (int i = 1; i <= n; i++) {
         cin >> nums[i];
     }
+
     int sum = accumulate(nums, nums + n + 1, 0);
 
-    if ( n == 1 ){
-        // cout << "# " << nums[1] << endl;
+    if ( n == 1 ) {
         cout << 1 - nums[1] << "\n";
         return 0;
     }
@@ -23,7 +23,6 @@ int main(){
         if ( nums[i] == 0 ){
             dp[i][0] = dp[i-1][0] + 1;
             dp[i][1] = dp[i-1][1];
-            // cout << "!.. " << i << " " << dp[i][0] << endl;
         } else{
             dp[i][0] = dp[i-1][0];
             dp[i][1] = dp[i-1][1] + 1;
@@ -31,13 +30,11 @@ int main(){
     }
 
     for (int i = 1; i <= n; i++){
-        // cout << dp[i][0] << " " << dp[i][1] << "\n";
         for (int j = 1; j <= i; j++){
             int ones = dp[i][1] - dp[j-1][1];
             int zeros = dp[i][0] - dp[j-1][0];
             if ( zeros > ones ){
                 ans = max(ans, sum - ones + zeros );
-                // cout << "# " << i << " " << j << " " << zeros << " " << ones << endl;
             }
         }
     }
