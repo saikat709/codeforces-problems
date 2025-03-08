@@ -16,5 +16,5 @@ https://www.codeforces.com/problemset/problem/<Code-Num>/<Code-Alpha>
 ### Example
 If the problem file is saved as `1884B_Permutations_&_Primes.cpp` the link would be -
     ```
-    
+    https://www.codeforces.com/problemset/problem/1884/B
     ```
