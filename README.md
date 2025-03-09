@@ -3,6 +3,11 @@
 cat _teamplate.cpp > filename.cpp
 ```
 
+## To run a program
+```bash
+g++ 2063B_Subsequence_Update.cpp && ./a.out && rm a.out
+```
+
 ## Notes
 Need lookup on:
 - 1979B XOR sequences
