@@ -13,8 +13,7 @@ int main() {
     freopen( "_in.txt",  "r", stdin  );
     freopen( "_out.txt", "w", stdout );
 
-    int tt;
-    cin >> tt;
+    int tt; cin >> tt;
     while (tt--) solve();
     return 0;
 }
